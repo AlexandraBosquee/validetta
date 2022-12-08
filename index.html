@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+    <title>Formulaire</title>
+</head>
+<body>
+
+    Formulaire Validetta
+
+    <div class="contenue"></div>
+
+    <form method="post" id="form" >
+        <label for="name">Nom:</label><br>
+        <input  data-validetta="required" type="text" id="name" name="name" ><br>
+        <label for="mail">Email:</label><br>
+        <input  data-validetta="required,email" type="text" id="mail" name="mail"><br><br>
+        <label for="mailconfi">Confirmer l'email:</label><br>
+        <input  data-validetta="required,equalTo[mail],email" type="text" id="mailconfi" name="mailconfi"><br><br>
+        <textarea  data-validetta="required" id="message" name="message" rows="10" cols="30"></textarea>
+        <button id="btn" type="submit">Envoyer</button>
+      </form> 
+
+    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/validetta.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
